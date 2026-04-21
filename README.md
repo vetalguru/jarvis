@@ -1,2 +1,2 @@
-# jarvis-
+# Jarvis
 Real-time AI assistant
