@@ -1,41 +1,120 @@
-# Prerequisites
+# =============================================================================
+# Compiled binaries and object files
+# =============================================================================
 *.d
-
-# Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
-
-# Precompiled Headers
 *.gch
 *.pch
-
-# Linker files
 *.ilk
-
-# Debugger Files
 *.pdb
-
-# Compiled Dynamic libraries
 *.so
 *.dylib
 *.dll
-
-# Fortran module files
 *.mod
 *.smod
-
-# Compiled Static libraries
 *.lai
 *.la
 *.a
 *.lib
-
-# Executables
 *.exe
 *.out
 *.app
-
-# debug information files
 *.dwo
+*.exp
+
+# =============================================================================
+# CMake
+# =============================================================================
+/build/
+/build-*/
+/out/
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+CMakeUserPresets.json
+
+# =============================================================================
+# Visual Studio / VS Code
+# =============================================================================
+/.vs/
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# VS Code — ignore personal settings, keep shared config
+/.vscode/*
+!/.vscode/extensions.json
+!/.vscode/settings.json.example
+
+# =============================================================================
+# JetBrains (CLion, Rider)
+# =============================================================================
+/.idea/
+*.iml
+
+# =============================================================================
+# Package managers
+# =============================================================================
+/vcpkg_installed/
+/vcpkg/
+
+# =============================================================================
+# Project-specific
+# =============================================================================
+
+# AI models — too large for git
+/models/
+*.gguf
+*.onnx
+*.bin
+*.safetensors
+
+# Application data and user sessions
+/sessions/
+/data/
+/cache/
+
+# Logs
+/logs/
+*.log
+
+# Secrets and local config
+*.env
+.env.local
+secrets.json
+credentials.json
+
+# =============================================================================
+# OS generated
+# =============================================================================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =============================================================================
+# Temporary files
+# =============================================================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*~

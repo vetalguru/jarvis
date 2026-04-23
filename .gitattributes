@@ -1,0 +1,136 @@
+# =============================================================================
+# Default: auto-detect text/binary and normalize line endings
+# =============================================================================
+* text=auto
+
+# =============================================================================
+# Source code — always LF
+# =============================================================================
+*.c         text eol=lf
+*.h         text eol=lf
+*.cpp       text eol=lf
+*.hpp       text eol=lf
+*.cc        text eol=lf
+*.hh        text eol=lf
+*.cxx       text eol=lf
+*.hxx       text eol=lf
+*.inl       text eol=lf
+*.ipp       text eol=lf
+
+# =============================================================================
+# Build system
+# =============================================================================
+CMakeLists.txt       text eol=lf
+*.cmake              text eol=lf
+CMakePresets.json    text eol=lf
+CMakeUserPresets.json text eol=lf
+Makefile             text eol=lf
+
+# =============================================================================
+# Configuration and data files — LF
+# =============================================================================
+*.json      text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.toml      text eol=lf
+*.xml       text eol=lf
+*.ini       text eol=lf
+
+# =============================================================================
+# Documentation — LF
+# =============================================================================
+*.md        text eol=lf
+*.txt       text eol=lf
+LICENSE     text eol=lf
+README      text eol=lf
+CHANGELOG   text eol=lf
+
+# =============================================================================
+# Shell / Unix scripts — LF (required to execute)
+# =============================================================================
+*.sh        text eol=lf
+*.bash      text eol=lf
+
+# =============================================================================
+# Windows scripts — CRLF (required for cmd)
+# =============================================================================
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.ps1       text eol=crlf
+
+# =============================================================================
+# Protocol / schema definitions (future use)
+# =============================================================================
+*.proto     text eol=lf
+*.capnp     text eol=lf
+*.fbs       text eol=lf
+
+# =============================================================================
+# Binary files — do not diff or merge
+# =============================================================================
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.bmp       binary
+*.tiff      binary
+*.webp      binary
+
+*.mp3       binary
+*.wav       binary
+*.ogg       binary
+*.flac      binary
+*.opus      binary
+
+*.mp4       binary
+*.avi       binary
+*.mkv       binary
+
+*.pdf       binary
+*.doc       binary
+*.docx      binary
+
+*.zip       binary
+*.tar       binary
+*.gz        binary
+*.7z        binary
+*.rar       binary
+
+*.exe       binary
+*.dll       binary
+*.lib       binary
+*.pdb       binary
+*.obj       binary
+*.o         binary
+*.a         binary
+*.so        binary
+*.dylib     binary
+
+# =============================================================================
+# Git LFS — large files kept in repo via LFS
+# (AI models, test media fixtures)
+# =============================================================================
+*.gguf      filter=lfs diff=lfs merge=lfs -text
+*.onnx      filter=lfs diff=lfs merge=lfs -text
+*.safetensors filter=lfs diff=lfs merge=lfs -text
+*.bin       filter=lfs diff=lfs merge=lfs -text
+
+tests/fixtures/**/*.wav   filter=lfs diff=lfs merge=lfs -text
+tests/fixtures/**/*.mp4   filter=lfs diff=lfs merge=lfs -text
+
+# =============================================================================
+# Linguist — GitHub language statistics
+# =============================================================================
+build/**           linguist-vendored
+vcpkg_installed/** linguist-vendored
+third_party/**     linguist-vendored
+
+docs/**            linguist-documentation
+
+*_generated.h      linguist-generated
+*_generated.cpp    linguist-generated
+*.pb.cc            linguist-generated
+*.pb.h             linguist-generated
+*.capnp.c++        linguist-generated
+*.capnp.h          linguist-generated
